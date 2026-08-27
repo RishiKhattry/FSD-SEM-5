@@ -1,26 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bus Booking system</title>
+    <title>Bus Booking System</title>
 </head>
-<body >
-    <div style="background-color:beige; border:2px solid red ;height: 400px;width: 200px;">
+
+<body style="background-color: #dbeafe;">
+
+    <div style="
+        background-color: white;
+        border: 2px solid #2563eb;
+        width: 500px;
+        margin: 30px auto;
+        padding: 25px;
+        border-radius: 15px;
+    ">
+
         <center>
-            <h1>Welcome to Bus Booker</h1>
+            <h1 style="color: #1d4ed8;">🚌 Bus Booker</h1>
+            <p style="color: gray;">Book your bus seat easily</p>
         </center>
-        <h3>User Information</h3>
-        <p>NAME:</p>
-        <input type="text"><br>
-        <p>ADDRESS: <select name="" id="">select your city
-            <option value="Gzb"></option>
-            <option value="Delhi"></option>
-            <option value="Kanpur"></option>
-            <option value="Meerut"></option>
-            <option value="Hapur"></option>
-        </select></p>
-    
+
+        <hr>
+
+        <h3 style="color: #1d4ed8;">User Information</h3>
+
+        <p>
+            <b>NAME:</b><br>
+            <input type="text" placeholder="Enter your name"
+                   style="width: 90%; padding: 8px;">
+        </p>
+
+        <p>
+            <b>ADDRESS (Select your city):</b><br>
+            <select style="width: 94%; padding: 8px;">
+                <option>Ghaziabad</option>
+                <option>Delhi</option>
+                <option>Kanpur</option>
+                <option>Meerut</option>
+                <option>Hapur</option>
+            </select>
+        </p>
+
+        <p>
+            <b>User Age:</b><br>
+            <input type="text" placeholder="Enter your age"
+                   style="width: 90%; padding: 8px;">
+        </p>
+
+        <p>
+            <b>User Aadhar Number:</b><br>
+            <input type="text" placeholder="Enter Aadhar number"
+                   style="width: 90%; padding: 8px;">
+        </p>
+
+        <hr>
+
+        <h3 style="color: #1d4ed8;">Bus Booking Options</h3>
+
+        <p><b>Select Bus Type:</b></p>
+
+        <label>
+            <input type="radio" name="bus">
+            AC Bus - ₹2000
+        </label>
+
+        <br><br>
+
+        <label>
+            <input type="radio" name="bus">
+            Non-AC Bus - ₹1000
+        </label>
+
+        <p>
+            <b>Select Your Seat:</b><br>
+
+            <select style="width: 94%; padding: 8px;">
+                <option>Select Seat</option>
+                <option>Seat 1</option>
+                <option>Seat 2</option>
+                <option>Seat 3</option>
+                <option>Seat 4</option>
+            </select>
+        </p>
+
+        <br>
+
+        <center>
+            <button style="
+                background-color: #2563eb;
+                color: white;
+                border: none;
+                padding: 10px 30px;
+                border-radius: 8px;
+                font-size: 16px;
+            ">
+                Book Bus
+            </button>
+        </center>
+
     </div>
+
 </body>
+
 </html>
