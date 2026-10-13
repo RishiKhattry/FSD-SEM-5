@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <style>
+        .card {
+            width: 350px;
+            margin: 100px auto;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid blue;
+            border-radius: 15px;
+            font-size: 20px;
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>Weather App</h1>
+
+        <input type="text" id="city" placeholder="Enter city">
+
+        <button onclick="loadData()">Get Weather</button>
+
+        <div id="data"></div>
+
+    </div>
+
+    <script>
+
+        const ele = document.getElementById("data");
+
+        async function loadData() {
+
+            const city = document.getElementById("city").value;
+
+            const URL = `YOUR_API_URL`;
+
+            try {
+
+                const res = await fetch(URL);
+
+                const data = await res.json();
+
+                console.log("DATA", data);
+
+                let row = `
+                    <h2>${city}</h2>
+                    <p>Temperature: ${data.temperature}°C</p>
+                    <p>Weather: ${data.condition}</p>
+                `;
+
+                ele.innerHTML = row;
+
+            }
+
+            catch(err) {
+
+                console.log("ERROR", err);
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>
